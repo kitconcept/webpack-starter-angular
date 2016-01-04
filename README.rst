@@ -73,6 +73,34 @@ Linting::
   $ npm run lint
 
 
+HTML Webpack Plugin
+-------------------
+
+Installation::
+
+  $ npm install html-webpack-plugin --save-dev
+
+webpack.config.js::
+
+  var HtmlWebpackPlugin = require('html-webpack-plugin')
+
+  module.exports = {
+    ...
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Website Starter',
+        template: 'src/index.html',
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        }
+      })
+    ],
+  }
+
 ES 6 Imports
 ------------
 

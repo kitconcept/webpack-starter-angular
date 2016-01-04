@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --port 3000 --content-base public/",
+    "dev": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "build": "webpack",
     "lint": "eslint src/ ; true",
     "test": "karma start ; true"
@@ -13,7 +13,8 @@
     "bundle",
     "bundling",
     "webpack",
-    "npm"
+    "npm",
+    "angular"
   ],
   "author": "Timo Stollenwerk",
   "license": "MIT",
@@ -25,6 +26,7 @@
     "eslint-config-angular": "^0.4.0",
     "eslint-plugin-angular": "^0.12.0",
     "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.7.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.7.1",
     "karma": "^0.13.9",
