@@ -1,3 +1,7 @@
+.. image:: https://travis-ci.org/kitconcept/webpack-starter-angular.svg?branch=master
+    :target: https://travis-ci.org/kitconcept/webpack-starter-angular
+
+
 Webpack Starter Angular
 =======================
 
