@@ -1,15 +1,6 @@
 module.exports = function (config) {
 
-  if(process.env.TRAVIS){
-    configuration.browsers = ['Chrome_travis_ci'];
-    // configuration.reporters = configuration.reporters.concat(['coverage', 'coveralls']);
-    // configuration.coverageReporter = {
-    //   type : 'lcovonly',
-    //   dir : 'coverage/'
-    // };
-  }
-
-  config.set({
+  var configuration = {
     // base path used to resolve all patterns
     basePath: '',
 
@@ -73,5 +64,17 @@ module.exports = function (config) {
 
     // if true, Karma runs tests once and exits
     singleRun: true
-  });
+  };
+
+  if(process.env.TRAVIS){
+    configuration.browsers = ['Chrome_travis_ci'];
+    // configuration.reporters = configuration.reporters.concat(['coverage', 'coveralls']);
+    // configuration.coverageReporter = {
+    //   type : 'lcovonly',
+    //   dir : 'coverage/'
+    // };
+  }
+
+  config.set(configuration);
+
 };
