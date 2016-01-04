@@ -6,7 +6,7 @@ Stack
 
 - NPM
 - Webpack
-- Angular 1.4
+- Angular 1.5
 - Angular UI Router (with self-registering components)
 - ES 6 / Babel (Module Loading)
 - SASS
