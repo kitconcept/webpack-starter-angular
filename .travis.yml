@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - 4.2.1
+cache:
+  directories:
+    - node_modules
 install:
 - npm install -g babel
 - npm install -g webpack
