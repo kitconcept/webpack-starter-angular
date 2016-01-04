@@ -222,6 +222,41 @@ Javascript::
 Service
 -------
 
+...
+
+Travis CI
+---------
+
+- Enable Travis for repository
+
+.travis.yml::
+
+  language: node_js
+  node_js:
+  - 4.2.1
+  cache:
+    directories:
+      - node_modules
+  before_install:
+    - export CHROME_BIN=chromium-browser
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+  install:
+  - npm install -g babel
+  - npm install -g webpack
+  - npm install -g webpack-dev-server
+  - npm install -g eslint
+  - npm install
+  script:
+  - npm run test
+  notifications:
+    email:
+    - stollenwerk@kitconcept.com
+
+webpack.config.js::
+
+  ...
+
 
 Sources
 -------
@@ -229,3 +264,5 @@ Sources
 - Webpack: https://github.com/faassen/bundle_example
 - Angular: https://github.com/angular-class/NG6-starter
 - Angular: http://angular-tips.com/blog/2015/06/using-angular-1-dot-x-with-es6-and-webpack/
+- Webpack and Babel6: https://github.com/rauschma/webpack-babel-demo
+
