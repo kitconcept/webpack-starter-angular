@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 4.2.1
+install:
+- npm install -g babel
+- npm install -g webpack
+- npm install -g webpack-dev-server
+- npm install -g eslint
+script:
+- npm run test
+notifications:
+  email:
+  - stollenwerk@kitconcept.com
