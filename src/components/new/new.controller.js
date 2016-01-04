@@ -1,6 +1,6 @@
 class NewController {
   constructor() {
-    this.name = 'About Us';
+    this.name = 'New Component Syntax';
   }
 }
 

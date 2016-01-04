@@ -14,6 +14,6 @@ let newModule = angular.module('new', [
     });
 })
 
-.directive('new', newComponent);
+.component('new', newComponent);
 
 export default newModule;
