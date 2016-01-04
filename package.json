@@ -1,0 +1,57 @@
+{
+  "name": "webpack-starter-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --port 3000 --content-base public/",
+    "build": "webpack",
+    "lint": "eslint src/ ; true",
+    "test": "karma start ; true"
+  },
+  "keywords": [
+    "bundle",
+    "bundling",
+    "webpack",
+    "npm"
+  ],
+  "author": "Timo Stollenwerk",
+  "license": "MIT",
+  "devDependencies": {
+    "angular-mocks": "^1.4.7",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.21.0",
+    "eslint": "^1.7.3",
+    "eslint-config-angular": "^0.4.0",
+    "eslint-plugin-angular": "^0.12.0",
+    "file-loader": "^0.8.4",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.7.1",
+    "karma": "^0.13.9",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.4",
+    "karma-webpack": "^1.5.1",
+    "mocha": "^2.3.0",
+    "node-sass": "^3.3.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.0.0",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "angular": "^1.4.4",
+    "angular-sanitize": "^1.4.7",
+    "angular-schema-form": "^0.8.12",
+    "angular-ui-bootstrap": "^0.14.3",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "objectpath": "^1.2.1",
+    "tv4": "^1.2.7"
+  }
+}
