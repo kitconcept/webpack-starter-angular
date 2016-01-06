@@ -17,6 +17,10 @@
         "semi": [
             2,
             "always"
+        ],
+        "angular/di": [
+            2,
+            "$inject"
         ]
     },
     "env": {
@@ -32,7 +36,8 @@
       "before"     : false,
       "beforeEach" : false,
       "after"      : false,
-      "afterEach"  : false
+      "afterEach"  : false,
+      "require"    : false
     },
     "extends": "eslint:recommended"
 }
