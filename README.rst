@@ -105,6 +105,7 @@ webpack.config.js::
     ],
   }
 
+
 ES 6 Imports
 ------------
 
@@ -261,6 +262,16 @@ webpack.config.js::
 
   ...
 
+ESLint
+------
+
+Installation::
+
+  $ npm install eslint -g
+
+Sublime Text 3 Installation:
+
+https://github.com/roadhump/SublimeLinter-eslint
 
 Sources
 -------
