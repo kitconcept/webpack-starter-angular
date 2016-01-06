@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "build": "webpack",
-    "lint": "eslint src/ ; true",
+    "lint": "eslint src/",
     "test": "karma start ; true"
   },
   "keywords": [
