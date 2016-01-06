@@ -15,8 +15,8 @@ install:
 - npm install -g eslint
 - npm install
 script:
+- npm run lint:travis
 - npm run test
-- npm run lint
 notifications:
   email:
   - stollenwerk@kitconcept.com

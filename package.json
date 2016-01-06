@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "build": "webpack",
     "lint": "eslint src/ || true",
-    "test": "karma start ; true"
+    "test": "karma start ; true",
+    "lint:travis": "eslint src/"
   },
   "keywords": [
     "bundle",
