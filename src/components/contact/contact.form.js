@@ -11,8 +11,7 @@ require('script!angular-schema-form/dist/bootstrap-decorator');
 // import 'angular-schema-form/dist/bootstrap-decorator';
 
 let contactFormModule = angular.module('contactForm', [
-  uiRouter,
-  schemaForm.name
+  uiRouter
 ])
 
 .config(($stateProvider) => {

@@ -7,7 +7,7 @@ import ContactForm from './contact/contact.form';
 import Github from './github/github';
 import New from './new/new';
 
-let componentModule = angular.module('app.components', [
+export default angular.module('app.components', [
   About.name,
   Contact.name,
   ContactAddress.name,
@@ -16,5 +16,3 @@ let componentModule = angular.module('app.components', [
   Github.name,
   New.name
 ]);
-
-export default componentModule;
