@@ -5,9 +5,8 @@ import HeroTemplate from './hero.jade';
 
 describe('Hero', () => {
   let makeController;
-  let $window;
 
-  beforeEach($window.module(HeroModule.name));
+  beforeEach(window.module(HeroModule.name));
   beforeEach(inject(() => {
     makeController = () => {
       return new HeroController();
