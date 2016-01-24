@@ -4,11 +4,11 @@ import NavbarComponent from './navbar.component';
 import NavbarTemplate from './navbar.html';
 
 describe('Navbar', () => {
-  let $rootScope, makeController;
+  let makeController;
+  let $window;
 
-  beforeEach(window.module(NavbarModule.name));
-  beforeEach(inject((_$rootScope_) => {
-    $rootScope = _$rootScope_;
+  beforeEach($window.module(NavbarModule.name));
+  beforeEach(inject(() => {
     makeController = () => {
       return new NavbarController();
     };

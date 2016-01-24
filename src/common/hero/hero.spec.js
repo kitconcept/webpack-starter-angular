@@ -4,11 +4,11 @@ import HeroComponent from './hero.component';
 import HeroTemplate from './hero.jade';
 
 describe('Hero', () => {
-  let $rootScope, makeController;
+  let makeController;
+  let $window;
 
-  beforeEach(window.module(HeroModule.name));
-  beforeEach(inject((_$rootScope_) => {
-    $rootScope = _$rootScope_;
+  beforeEach($window.module(HeroModule.name));
+  beforeEach(inject(() => {
     makeController = () => {
       return new HeroController();
     };
