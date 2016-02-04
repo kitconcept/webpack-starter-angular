@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import contactFormComponent from './contact.form.component';
-import ngSanitize from 'angular-sanitize';
+import 'angular-sanitize';
 require('script!tv4/tv4.js');
 require('script!objectpath/lib/ObjectPath');
 require('script!angular-schema-form/dist/schema-form');
@@ -11,8 +11,7 @@ require('script!angular-schema-form/dist/bootstrap-decorator');
 // import 'angular-schema-form/dist/bootstrap-decorator';
 
 let contactFormModule = angular.module('contactForm', [
-  uiRouter,
-  schemaForm.name
+  uiRouter
 ])
 
 .config(($stateProvider) => {
@@ -24,14 +23,5 @@ let contactFormModule = angular.module('contactForm', [
 })
 
 .directive('contactform', contactFormComponent);
-
-console.log('angular:');
-console.log(angular);
-console.log('uiRouter:');
-console.log(uiRouter);
-console.log('ngSanitize:');
-console.log(ngSanitize);
-console.log('schemaForm:');
-console.log(schemaForm);
 
 export default contactFormModule;

@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "build": "webpack",
-    "lint": "eslint src/ ; true",
-    "test": "karma start ; true"
+    "lint": "eslint src/ || true",
+    "test": "karma start",
+    "lint:travis": "eslint src/"
   },
   "keywords": [
     "bundle",

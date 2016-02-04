@@ -1,14 +1,13 @@
-import NavbarModule from './navbar'
+import NavbarModule from './navbar';
 import NavbarController from './navbar.controller';
 import NavbarComponent from './navbar.component';
 import NavbarTemplate from './navbar.html';
 
 describe('Navbar', () => {
-  let $rootScope, makeController;
+  let makeController;
 
-  beforeEach(window.module(NavbarModule.name));
-  beforeEach(inject((_$rootScope_) => {
-    $rootScope = _$rootScope_;
+  beforeEach(window.module(NavbarModule.name));  // eslint-disable-line
+  beforeEach(inject(() => {
     makeController = () => {
       return new NavbarController();
     };
@@ -27,19 +26,19 @@ describe('Navbar', () => {
   });
 
   describe('Component', () => {
-      // component/directive specs
-      let component = NavbarComponent();
+    // component/directive specs
+    let component = NavbarComponent();
 
-      it('includes the intended template',() => {
-        expect(component.template).to.equal(NavbarTemplate);
-      });
+    it('includes the intended template',() => {
+      expect(component.template).to.equal(NavbarTemplate);
+    });
 
-      it('uses `controllerAs` syntax', () => {
-        expect(component).to.have.property('controllerAs');
-      });
+    it('uses `controllerAs` syntax', () => {
+      expect(component).to.have.property('controllerAs');
+    });
 
-      it('invokes the right controller', () => {
-        expect(component.controller).to.equal(NavbarController);
-      });
+    it('invokes the right controller', () => {
+      expect(component.controller).to.equal(NavbarController);
+    });
   });
 });

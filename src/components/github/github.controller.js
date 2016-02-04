@@ -8,7 +8,6 @@ class GithubController {
   getDetails() {
     this.service.getItems(this.githubUsername).then((res) => {
       this.result = res.data;
-      console.log(this.result);
     });
   }
 

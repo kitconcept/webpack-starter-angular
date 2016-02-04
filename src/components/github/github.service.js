@@ -1,7 +1,7 @@
 class GithubService {
 
   constructor($http) {
-      this.$http = $http;
+    this.$http = $http;
   }
 
   getItems(githubUsername) {
@@ -10,16 +10,16 @@ class GithubService {
       method: 'JSONP',
       url: githubUrl + '/users/' +
       githubUsername + '?callback=JSON_CALLBACK'
-    }).success(function(data, status, headers, config) {
+    }).success(function(data) {
       // this callback will be called asynchronously
       // when the response is available
-      return JSON.stringify(data.data, null, 2);
+      return data.data.toJSON();
     }).
-    error(function(data, status, headers, config) {
+    error(function(data, status) {
       // called asynchronously if an error occurs
       // or server returns response with an error status.
       alert(status);
-    });;
+    });
   }
 
 }

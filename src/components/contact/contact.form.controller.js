@@ -1,25 +1,25 @@
 class ContactFormController {
-  constructor($scope) {
-    this.name = 'Contact Us'
+  constructor($scope, $log) {
+    this.name = 'Contact Us';
     this.model = {};
     this.schema = {
-      type: "object",
+      type: 'object',
       properties: {
-        name: { type: "string", minLength: 2, title: "Name", description: "Name or alias" },
+        name: { type: 'string', minLength: 2, title: 'Name', description: 'Name or alias' },
         title: {
-          type: "string",
+          type: 'string',
           enum: ['dr','jr','sir','mrs','mr','NaN','dj']
         }
       },
-      "required": [
-        "name",
+      'required': [
+        'name'
       ]
     };
     this.form = [
-      "*",
+      '*',
       {
-        type: "submit",
-        title: "Save"
+        type: 'submit',
+        title: 'Save'
       }
     ];
 
@@ -29,11 +29,11 @@ class ContactFormController {
 
       // Then we check if the form is valid
       if (form.$valid) {
-        console.log('form is valid')
+        $log('form is valid');
       } else {
-        console.log('form is invalid')
+        $log('form is invalid');
       }
-    }
+    };
   }
 }
 

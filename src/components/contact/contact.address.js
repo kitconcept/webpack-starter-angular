@@ -3,7 +3,7 @@ import uiRouter from 'angular-ui-router';
 import contactAddressComponent from './contact.address.component';
 
 let contactAddressModule = angular.module('contactAddress', [
-  uiRouter,
+  uiRouter
 ])
 
 .config(($stateProvider) => {
