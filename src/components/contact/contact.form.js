@@ -22,6 +22,6 @@ let contactFormModule = angular.module('contactForm', [
     });
 })
 
-.directive('contactform', contactFormComponent);
+.component('contactform', contactFormComponent);
 
 export default contactFormModule;

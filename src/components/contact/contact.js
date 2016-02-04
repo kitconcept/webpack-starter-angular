@@ -14,6 +14,6 @@ let contactModule = angular.module('contact', [
     });
 })
 
-.directive('contact', contactComponent);
+.component('contact', contactComponent);
 
 export default contactModule;

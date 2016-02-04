@@ -15,7 +15,7 @@ let githubModule = angular.module('github', [
     });
 })
 
-.directive('github', githubComponent)
+.component('github', githubComponent)
 .service('githubService', githubService);
 
 export default githubModule;
