@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -25,8 +25,8 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.scss$/, loaders: ["style", "css?sourceMap", "sass?sourceMap"]},
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']},
       { test: /\.html$/, loader: 'raw' },
       { test: /\.jade$/, loader: 'jade-loader' },
       // inline base64 URLs for <=8k images, direct URLs for the rest
