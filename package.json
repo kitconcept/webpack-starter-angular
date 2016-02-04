@@ -55,8 +55,8 @@
     "webpack": "^1.12.9"
   },
   "dependencies": {
-    "angular": "^1.5.0-rc.0",
-    "angular-sanitize": "^1.5.0-rc.0",
+    "angular": "^1.5.0-rc.2",
+    "angular-sanitize": "^1.5.0-rc.2",
     "angular-schema-form": "^0.8.12",
     "angular-ui-bootstrap": "^0.14.3",
     "angular-ui-router": "^0.2.15",
