@@ -6,7 +6,7 @@ import HeroTemplate from './hero.jade';
 describe('Hero', () => {
   let makeController;
 
-  beforeEach(window.module(HeroModule.name));
+  beforeEach(window.module(HeroModule.name));  // eslint-disable-line
   beforeEach(inject(() => {
     makeController = () => {
       return new HeroController();

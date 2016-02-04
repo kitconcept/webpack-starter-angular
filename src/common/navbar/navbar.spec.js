@@ -6,7 +6,7 @@ import NavbarTemplate from './navbar.html';
 describe('Navbar', () => {
   let makeController;
 
-  beforeEach(window.module(NavbarModule.name));
+  beforeEach(window.module(NavbarModule.name));  // eslint-disable-line
   beforeEach(inject(() => {
     makeController = () => {
       return new NavbarController();
