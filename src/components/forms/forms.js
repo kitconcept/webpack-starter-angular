@@ -1,14 +1,16 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import formsComponent from './forms.component';
-require('script!tv4/tv4.js');
-require('script!objectpath/lib/ObjectPath');
-require('script!angular-schema-form/dist/schema-form');
-require('script!angular-schema-form/dist/bootstrap-decorator');
+
+// order is important!
+import 'tv4';
+import 'objectpath';
+import schemaForm from 'angular-schema-form';
+import 'script!angular-schema-form-bootstrap';
 
 let formsModule = angular.module('forms', [
   uiRouter,
-  'schemaForm'
+  schemaForm.name
 ])
 
 .config(($stateProvider) => {
