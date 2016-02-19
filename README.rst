@@ -210,8 +210,8 @@ Installation::
 
 Javascript::
 
-  import ngSanitize from 'angular-sanitize';
-  import tv4 from 'tv4/tv4.js';
+  import 'angular-sanitize';
+  require('script!tv4/tv4.js');
   require('script!objectpath/lib/ObjectPath');
   require('script!angular-schema-form/dist/schema-form');
   require('script!angular-schema-form/dist/bootstrap-decorator');
