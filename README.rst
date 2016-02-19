@@ -216,15 +216,16 @@ Javascript::
   require('script!angular-schema-form/dist/schema-form');
   require('script!angular-schema-form/dist/bootstrap-decorator');
 
-  let contactFormModule = angular.module('contactForm', [
-    uiRouter
+  let formsModule = angular.module('forms', [
+    uiRouter,
+    'schemaForm'
   ])
 
   ...
 
 Controller::
 
-  class ContactFormController {
+  class FormsController {
     constructor() {
       this.name = 'Contact Us';
       this.model = {};
@@ -251,7 +252,7 @@ Controller::
     }
   }
 
-  export default ContactFormController;
+  export default FormsController;
 
 
 Service
