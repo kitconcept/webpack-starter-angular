@@ -18,6 +18,7 @@ install:
 script:
 - npm run lint:travis
 - npm run test
+- npm run dev
 - pybot test.robot
 notifications:
   email:

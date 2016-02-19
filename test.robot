@@ -1,7 +1,7 @@
 *** Variables ***
 
 ${HOSTNAME}             127.0.0.1
-${PORT}                 80
+${PORT}                 3000
 ${SERVER}               http://${HOSTNAME}:${PORT}/
 ${BROWSER}              firefox
 
