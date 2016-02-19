@@ -40,14 +40,15 @@ class FormController {
       $scope.$broadcast('schemaFormValidate');
 
       // Then we check if the form is valid
+      var msg = [];
       if (form.$valid) {
-        var msg = [{
+        msg = [{
           'type': 'help',
           'helpvalue': '<div class=\'alert alert-success\'>Form submitted successfully</div>'
         }];
         this.form = msg.concat(this.form);
       } else {
-        var msg = [{
+        msg = [{
           'type': 'help',
           'helpvalue': '<div class=\'alert alert-danger\'>Form is invalid</div>'
         }];
