@@ -47,6 +47,10 @@ Forms
   Page should contain element  title
   Input Text  name  John Doe
   Select From List By Label  title  mr
-  Click Button  Save
+  Input Text  email  john@doe.com
+  Input Text  comment  Hi World
+  Click Element  css=.btn-primary
+  Wait until page contains element  css=.alert
+  Page should contain  Form submitted successfully
 
 

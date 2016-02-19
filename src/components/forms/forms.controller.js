@@ -1,5 +1,5 @@
 class FormController {
-  constructor() {
+  constructor($scope) {
     this.name = 'Form Component Syntax';
     this.model = {};
     this.schema = {
@@ -9,7 +9,19 @@ class FormController {
           type: 'string',
           enum: ['dr','jr','sir','mrs','mr','NaN','dj']
         },
-        name: { type: 'string', minLength: 2, title: 'Name', description: 'Name or alias' }
+        name: { type: 'string', minLength: 2, title: 'Name', description: 'Name or alias' },
+        email:  {
+          'title': 'Email',
+          'type': 'string',
+          'pattern': '^\\S+@\\S+$',
+          'description': 'Invalid email address'
+        },
+        comment: {
+          'title': 'Comment',
+          'type': 'string',
+          'maxLength': 20,
+          'validationMessage': 'Maximum length is 20 characters'
+        }
       },
       'required': [
         'name'
@@ -22,6 +34,27 @@ class FormController {
         title: 'Save'
       }
     ];
+
+    this.onSubmit = function(form) {
+      // First we broadcast an event so all fields validate themselves
+      $scope.$broadcast('schemaFormValidate');
+
+      // Then we check if the form is valid
+      if (form.$valid) {
+        var msg = [{
+          'type': 'help',
+          'helpvalue': '<div class=\'alert alert-success\'>Form submitted successfully</div>'
+        }];
+        this.form = msg.concat(this.form);
+      } else {
+        var msg = [{
+          'type': 'help',
+          'helpvalue': '<div class=\'alert alert-danger\'>Form is invalid</div>'
+        }];
+        this.form = msg.concat(this.form);
+
+      }
+    };
   }
 }
 
