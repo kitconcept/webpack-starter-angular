@@ -10,6 +10,7 @@ ${BROWSER}              firefox
 
 Documentation   Webpack Starter Angular Acceptance Tests
 Library         Process
+Library         DebugLibrary
 Library         Selenium2Library  timeout=10  implicit_wait=0
 Suite Setup     Test Setup
 Suite Teardown  Test Teardown
@@ -20,8 +21,9 @@ Suite Teardown  Test Teardown
 Test Setup
   ${webpack-dev-server}=  Start Process  webpack-dev-server --bail --inline --port 3000 --content-base ${CURDIR}/dist   cwd=${CURDIR}  shell=true
   Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
-  Sleep  10s
+  Sleep  5s
   Open Browser  ${SERVER}  ${BROWSER}
+  Set Window Size  1280  1024
 
 Test Teardown
   Close Browser
@@ -31,8 +33,20 @@ Test Teardown
 
 *** Test Cases ***
 
-Webserver Setup
+Front Page
   Go To  ${SERVER}
   Wait until page contains  Webpack Starter
   Page Should Contain  Webpack Starter
+
+Forms
+  Go To  ${SERVER}
+  Wait until page contains  Webpack Starter
+  Click Link  Forms
+  Wait until page contains  Forms
+  Page should contain element  name
+  Page should contain element  title
+  Input Text  name  John Doe
+  Select From List By Label  title  mr
+  Click Button  Save
+
 
