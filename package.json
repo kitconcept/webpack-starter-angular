@@ -46,6 +46,7 @@
     "karma-sourcemap-loader": "^0.3.4",
     "karma-webpack": "^1.5.1",
     "mocha": "^2.3.0",
+    "ng-annotate-webpack-plugin": "^0.1.2",
     "node-sass": "^3.3.3",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.0.0",

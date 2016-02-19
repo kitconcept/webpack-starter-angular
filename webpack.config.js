@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -20,6 +21,9 @@ module.exports = {
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true
       }
+    }),
+    new ngAnnotatePlugin({
+      add: true
     })
   ],
   module: {

@@ -197,6 +197,23 @@ Jade (hero.jade)::
     h1 Angular, ES6, Webpack Starter!
     h3 You can find my template inside {{ vm.name }}.html
 
+NgAnnotate
+----------
+
+  $ npm install ng-annotate-webpack-plugin --save-dev
+
+webpack.config.js::
+
+  var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+
+  module.exports = {
+    plugins: [
+      new ngAnnotatePlugin({
+        add: true
+      })
+    ]
+  }
+
 
 Angular Schema Form
 -------------------
