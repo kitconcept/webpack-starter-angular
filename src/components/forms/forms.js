@@ -7,7 +7,8 @@ require('script!angular-schema-form/dist/schema-form');
 require('script!angular-schema-form/dist/bootstrap-decorator');
 
 let formsModule = angular.module('forms', [
-  uiRouter
+  uiRouter,
+  'schemaForm'
 ])
 
 .config(($stateProvider) => {
