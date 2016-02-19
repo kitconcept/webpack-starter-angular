@@ -10,6 +10,7 @@ import './styles.scss';
 angular.module('myApp', [
   uiRouter,
   Common.name,
-  Components.name
+  Components.name,
+  'schemaForm'
 ])
 .directive('app', AppComponent);
