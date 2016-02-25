@@ -58,6 +58,7 @@
     "angular": "^1.5.0-rc.2",
     "angular-sanitize": "^1.5.0-rc.2",
     "angular-schema-form": "^0.8.12",
+    "angular-schema-form-bootstrap": "^0.2.0",
     "angular-ui-bootstrap": "^0.14.3",
     "angular-ui-router": "^0.2.15",
     "bootstrap": "^3.3.5",
