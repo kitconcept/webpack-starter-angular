@@ -38,4 +38,22 @@ describe('Forms', () => {
     });
   });
 
+
+  describe('Component', () => {
+    // component/directive specs
+    let component = FormsComponent;
+
+    it('includes the intended template',() => {
+      expect(component.template).to.equal(FormsTemplate);
+    });
+
+    it('uses `controllerAs` syntax', () => {
+      expect(component).to.have.property('controllerAs');
+    });
+
+    it('invokes the right controller', () => {
+      expect(component.controller).to.equal(FormsController);
+    });
+  });
+
 });
