@@ -4,11 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "build": "webpack",
     "lint": "eslint src/ || true",
+    "lint:travis": "eslint src/",
+    "start": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "test": "karma start",
-    "lint:travis": "eslint src/"
+    "test:debug": "karma start karma.conf.js --log-level=debug --single-run=False",
+    "test:watch": "karma start karma.conf.js --auto-watch=true --single-run=False"
   },
   "keywords": [
     "bundle",
@@ -25,7 +27,7 @@
     ]
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.7",
+    "angular-mocks": "~1.5.0",
     "babel-core": "^6.3.26",
     "babel-loader": "^6.1.0",
     "babel-polyfill": "^6.3.14",
@@ -55,14 +57,15 @@
     "webpack": "~1.12.14"
   },
   "dependencies": {
-    "angular": "~1.5.0-rc.2",
-    "angular-sanitize": "~1.5.0-rc.2",
+    "angular": "~1.5.0",
+    "angular-sanitize": "~1.5.0",
     "angular-schema-form": "~0.8.12",
-    "angular-schema-form-bootstrap": "^0.2.0",
+    "angular-schema-form-bootstrap": "~0.2.0",
     "angular-ui-bootstrap": "~1.1.2",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
     "jquery": "~2.2.1",
+    "lodash": "~4.6.1",
     "objectpath": "~1.2.1",
     "tv4": "~1.2.7"
   }

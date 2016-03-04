@@ -34,13 +34,14 @@
     "modules": true
   },
   "globals" : {
+    "chai"       : false,
     "describe"   : false,
     "it"         : false,
     "before"     : false,
     "beforeEach" : false,
     "after"      : false,
     "afterEach"  : false,
-    "inject": false
+    "inject"     : false
   },
   "extends": "eslint:recommended"
 }
