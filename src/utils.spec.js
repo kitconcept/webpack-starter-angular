@@ -1,7 +1,7 @@
 import addField from './utils';
 
 // do not truncate diffs
-// chai.config.truncateThreshold = 0;
+chai.config.truncateThreshold = 0;
 
 
 describe('Test addField', () => {
@@ -19,7 +19,7 @@ describe('Test addField', () => {
       }
     };
     // console.log(JSON.stringify(expected, null, 2));
-    //console.log(JSON.stringify(schema, null, 2));
+    // console.log(JSON.stringify(schema, null, 2));
     expect(expected).to.deep.equal(schema);
   });
 

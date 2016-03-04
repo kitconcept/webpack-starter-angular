@@ -9,6 +9,7 @@
     "lint": "eslint src/ || true",
     "test": "karma start",
     "test:debug": "karma start karma.conf.js --log-level=debug --single-run=False",
+    "test:watch": "karma start karma.conf.js --auto-watch=true --single-run=False",
     "lint:travis": "eslint src/"
   },
   "keywords": [
