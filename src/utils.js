@@ -1,5 +1,8 @@
-let adder = function(value1, value2) {
-  return value1 + value2;
+import _ from 'lodash';
+
+// add field to existing json schema
+let addField = function(schema, field) {
+  return _.merge(schema, {'properties': field});
 };
 
-export default adder;
+export default addField;

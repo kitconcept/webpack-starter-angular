@@ -1,17 +1,44 @@
-import adder from './utils';
+import addField from './utils';
 
-describe('adder', () => {
+// do not truncate diffs
+chai.config.truncateThreshold = 0;
 
-  it('0 = 0 + 0', () => {
-    expect(0).to.equal(adder(0,0));
+
+describe('Test addField', () => {
+
+  it('add empty field', () => {
+    let schema = {
+      'properties': {
+        'one': {'one': 'foo'}
+      }
+    };
+    addField(schema, {});
+    let expected = {
+      'properties': {
+        'one': {'one': 'foo'}
+      }
+    };
+    // console.log(JSON.stringify(expected, null, 2));
+    //console.log(JSON.stringify(schema, null, 2));
+    expect(expected).to.deep.equal(schema);
   });
 
-  it('2 = 1 + 1', () => {
-    expect(2).to.equal(adder(1,1));
-  });
-
-  it('5 = 2 + 3', () => {
-    expect(5).to.equal(adder(2,3));
+  it('add simple field', () => {
+    let schema = {
+      'properties': {
+        'one': {'one': 'foo'}
+      }
+    };
+    addField(schema, {'two': {'two': 'bar'}});
+    let expected = {
+      'properties': {
+        'one': {'one': 'foo'},
+        'two': {'two': 'bar'}
+      }
+    };
+    // console.log(JSON.stringify(expected, null, 2));
+    // console.log(JSON.stringify(schema, null, 2));
+    expect(expected).to.deep.equal(schema);
   });
 
 });
