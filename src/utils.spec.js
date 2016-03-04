@@ -1,7 +1,7 @@
 import addField from './utils';
 
 // do not truncate diffs
-chai.config.truncateThreshold = 0;
+// chai.config.truncateThreshold = 0;
 
 
 describe('Test addField', () => {
