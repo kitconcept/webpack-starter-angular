@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
     "build": "webpack",
     "lint": "eslint src/ || true",
     "lint:travis": "eslint src/",
@@ -50,6 +51,7 @@
     "mocha": "^2.3.0",
     "node-sass": "^3.3.3",
     "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.2",
     "sass-loader": "^3.0.0",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
