@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-- 4.2.1
+- 4.4.5
+env:
+  - NODE_ENV=prod
+  - NODE_ENV=dev
 cache:
   directories:
     - node_modules
