@@ -3,7 +3,7 @@ const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
 // webpack plugins
-const WebpackMd5Hash = require('webpack-md5-hash');
+const WebpackMd5Hash = require('webpack-md5-hashA');
 
 
 module.exports = webpackMerge(commonConfig, {
