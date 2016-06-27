@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
-    "build": "webpack",
+    "build": "export NODE_ENV=dev && webpack",
+    "build:production": "export NODE_ENV=prod && webpack -p",
     "lint": "eslint src/ || true",
     "lint:travis": "eslint src/",
     "start": "webpack-dev-server --inline --port 3000 --content-base dist/",
