@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "analyze": "webpack --json | webpack-bundle-size-analyzer",
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
     "build": "export NODE_ENV=dev && webpack",
     "build:production": "export NODE_ENV=prod && webpack -p",
