@@ -57,6 +57,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "~1.12.14",
+    "webpack-md5-hash": "0.0.5",
     "webpack-merge": "^0.14.0"
   },
   "dependencies": {
