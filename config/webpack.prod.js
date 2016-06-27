@@ -3,6 +3,14 @@ const commonConfig = require('./webpack.common.js');
 
 module.exports = webpackMerge(commonConfig, {
 
+
+  /**
+   * Disable debug mode for production.
+   *
+   * See: http://webpack.github.io/docs/configuration.html#debug
+   */
+  debug: false,
+
   /**
    * Developer tool to enhance debugging.
    *
