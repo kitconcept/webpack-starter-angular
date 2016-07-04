@@ -44,5 +44,12 @@ module.exports = {
         loader: 'url?limit=10000&minetype=image/svg+xml' }
     ]
   },
+  resolve: {
+    root: path.join(__dirname, 'src'),
+    extensions: ['', '.js'],
+    alias: {
+      hero: './hero/hero'
+    }
+  },
   devtool: 'eval-source-map'
 };
