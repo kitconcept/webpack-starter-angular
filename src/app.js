@@ -6,6 +6,7 @@ import AppComponent from './app.component.js';
 import Common from './common/common';
 import Components from './components/components';
 import './styles.scss';
+import 'theme';
 
 angular.module('myApp', [
   uiRouter,

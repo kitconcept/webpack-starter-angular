@@ -51,6 +51,7 @@ module.exports = {
     root: path.join(__dirname, 'src'),
     extensions: ['', '.js'],
     alias: {
+      theme: '../mytheme/theme.scss',
       hero: '../../mytheme/hero/hero',
       navbar: './navbar/navbar',
       user: './user/user',
