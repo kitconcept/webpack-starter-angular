@@ -48,7 +48,7 @@ module.exports = {
     root: path.join(__dirname, 'src'),
     extensions: ['', '.js'],
     alias: {
-      hero: './hero/hero'
+      hero: '../../mytheme/hero/hero'
     }
   },
   devtool: 'eval-source-map'
