@@ -1,11 +1,11 @@
 import angular from 'angular';
-import Home from './home/home';
+import Home from 'home';
 import Contact from './contact/contact';
 import ContactAddress from './contact/contact.address';
 import ContactForm from './contact/contact.form';
 import Github from './github/github';
 import Forms from './forms/forms';
-import New from './new/new';
+import New from 'new';
 
 export default angular.module('app.components', [
   Contact.name,

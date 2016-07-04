@@ -54,6 +54,8 @@ module.exports = {
       hero: '../../mytheme/hero/hero',
       navbar: './navbar/navbar',
       user: './user/user',
+      home: './home/home',
+      new: '../../mytheme/components/new/new'
     }
   },
   devtool: 'eval-source-map'
