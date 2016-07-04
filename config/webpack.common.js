@@ -20,7 +20,10 @@ module.exports = {
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true
       }
-    })
+    }),
+    new webpack.DefinePlugin({
+        'process.env.WEBPACK_THEME': JSON.stringify(process.env.WEBPACK_THEME || false)
+    }),
   ],
   module: {
     loaders: [
@@ -48,7 +51,9 @@ module.exports = {
     root: path.join(__dirname, 'src'),
     extensions: ['', '.js'],
     alias: {
-      hero: '../../mytheme/hero/hero'
+      hero: '../../mytheme/hero/hero',
+      navbar: './navbar/navbar',
+      user: './user/user',
     }
   },
   devtool: 'eval-source-map'
