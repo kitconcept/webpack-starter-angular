@@ -66,7 +66,7 @@ Create a JS bundle with Webpack::
 
 Start the Webpack development server on 'localhost:3000'::
 
-  $ npm run dev
+  $ npm run start
 
 Run tests::
 
