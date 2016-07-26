@@ -7,8 +7,17 @@ env:
 cache:
   directories:
     - node_modules
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 before_install:
-  - export CHROME_BIN=chromium-browser
+  - wget "http://chromedriver.storage.googleapis.com/2.22/chromedriver_linux64.zip"
+  - unzip chromedriver_linux64.zip
+  - sudo mv chromedriver /usr/local/bin
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 install:
