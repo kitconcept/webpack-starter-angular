@@ -16,6 +16,7 @@ install:
 - npm install -g webpack
 - npm install -g webpack-dev-server
 - npm install -g eslint
+- npm install -g protractor
 - npm install
 - sudo pip install -r requirements.txt
 script:
