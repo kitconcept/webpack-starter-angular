@@ -12,6 +12,7 @@
     "lint:travis": "eslint src/",
     "start": "webpack-dev-server --inline --port 3000 --content-base dist/",
     "test": "karma start",
+    "test:acceptance": "protractor tests.conf.js",
     "test:debug": "karma start karma.conf.js --log-level=debug --single-run=False",
     "test:watch": "karma start karma.conf.js --auto-watch=true --single-run=False"
   },
