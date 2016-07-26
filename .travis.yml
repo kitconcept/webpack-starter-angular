@@ -27,7 +27,7 @@ install:
 - npm install -g eslint
 - npm install -g protractor
 - webdriver-manager update --standalone
-- webdriver-manager start &
+- nohup bash -c "webdriver-manager start 2>&1 &"
 - npm install
 - sudo pip install -r requirements.txt
 script:
