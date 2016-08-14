@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack Starter Angular - kitconcept',
-      template: 'src/index.html',
+      template: 'src/index.pug',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -28,7 +28,7 @@ module.exports = {
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']},
       { test: /\.html$/, loader: 'raw' },
-      { test: /\.jade$/, loader: 'jade-loader' },
+      { test: /\.(jade|pug)$/, loader: 'pug-loader' },
       // inline base64 URLs for <=8k images, direct URLs for the rest
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
       // helps to load bootstrap's css.

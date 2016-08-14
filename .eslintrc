@@ -1,6 +1,5 @@
 {
   "plugins": [angular],
-  "extends": angular,
   "rules": {
     "indent": [
       2,
@@ -30,8 +29,8 @@
     "mocha": true,
     "amd": true
   },
-  "ecmaFeatures": {
-    "modules": true
+  parserOptions: {
+    sourceType: "module"
   },
   "globals" : {
     "chai"       : false,
@@ -43,5 +42,5 @@
     "afterEach"  : false,
     "inject"     : false
   },
-  "extends": "eslint:recommended"
+  "extends": ["eslint:recommended", "angular"]
 }
