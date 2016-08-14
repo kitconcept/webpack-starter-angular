@@ -13,7 +13,7 @@ class GithubService {
     }).success(function(data) {
       // this callback will be called asynchronously
       // when the response is available
-      return data.data.toJSON();
+      return angular.toJson(data.data);
     }).
     error(function(data, status) {
       // called asynchronously if an error occurs
@@ -22,6 +22,9 @@ class GithubService {
     });
   }
 
+  static githubService($http){
+    return new GithubService($http);
+  }
 }
 
 export default GithubService;

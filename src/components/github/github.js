@@ -16,6 +16,6 @@ let githubModule = angular.module('github', [
 })
 
 .component('github', githubComponent)
-.service('githubService', githubService);
+.factory('githubService', githubService.githubService);
 
 export default githubModule;
