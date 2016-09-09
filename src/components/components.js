@@ -6,6 +6,7 @@ import ContactForm from './contact/contact.form';
 import Github from './github/github';
 import Forms from './forms/forms';
 import New from './new/new';
+import Wikipedia from './wikipedia/wikipedia'
 
 export default angular.module('app.components', [
   Contact.name,
@@ -14,5 +15,6 @@ export default angular.module('app.components', [
   Home.name,
   Github.name,
   Forms.name,
-  New.name
+  New.name,
+  Wikipedia.name
 ]);
