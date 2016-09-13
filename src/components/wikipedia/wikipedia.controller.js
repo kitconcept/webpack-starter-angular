@@ -1,6 +1,8 @@
+import rx from 'rx-angular';
+
 class WikipediaController {
 
-  constructor(wikipediaService) {
+  constructor($scope, $http, rx, wikipediaService) {
     this.result = {};
     this.service = wikipediaService;
   }

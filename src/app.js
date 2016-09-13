@@ -6,10 +6,12 @@ import AppComponent from './app.component.js';
 import Common from './common/common';
 import Components from './components/components';
 import './styles.scss';
+import rx from 'rx-angular';
 
 angular.module('myApp', [
   uiRouter,
   Common.name,
-  Components.name
+  Components.name,
+  'rx'
 ])
 .directive('app', AppComponent);
