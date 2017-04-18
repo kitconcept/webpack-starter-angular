@@ -5,7 +5,7 @@ import formsComponent from './forms.component';
 import 'tv4';
 import 'objectpath';
 import schemaForm from 'angular-schema-form';
-import 'script!angular-schema-form-bootstrap';
+import 'script-loader!angular-schema-form-bootstrap';
 
 let formsModule = angular.module('forms', [
   schemaForm.name,
