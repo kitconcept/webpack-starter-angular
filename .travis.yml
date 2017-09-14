@@ -7,10 +7,13 @@ env:
 cache:
   directories:
     - node_modules
-before_install:
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 install:
 - npm install -g babel
 - npm install -g webpack
@@ -18,6 +21,13 @@ install:
 - npm install -g eslint
 - npm install
 - sudo pip install -r requirements.txt
+before_script:
+- wget "http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip"
+- unzip chromedriver_linux64.zip
+- sudo mv chromedriver /usr/local/bin
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
+- sleep 2
 script:
 - npm run lint:travis
 - npm run test

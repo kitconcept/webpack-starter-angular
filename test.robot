@@ -3,7 +3,7 @@
 ${HOSTNAME}             127.0.0.1
 ${PORT}                 3000
 ${SERVER}               http://${HOSTNAME}:${PORT}/
-${BROWSER}              firefox
+${BROWSER}              chrome
 
 
 *** Settings ***
@@ -19,7 +19,7 @@ Suite Teardown  Test Teardown
 *** Keywords ***
 
 Test Setup
-  ${webpack-dev-server}=  Start Process  webpack-dev-server --bail --inline --port 3000 --content-base ${CURDIR}/dist   cwd=${CURDIR}  shell=true
+  ${webpack-dev-server}=  Start Process  node_modules/webpack-dev-server/bin/webpack-dev-server.js --bail --inline --port 3000 --content-base ${CURDIR}/dist   cwd=${CURDIR}  shell=true
   Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
   Sleep  5s
   Open Browser  ${SERVER}  ${BROWSER}
