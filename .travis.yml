@@ -32,6 +32,3 @@ script:
 - npm run lint:travis
 - npm run test
 - pybot test.robot
-notifications:
-  email:
-  - stollenwerk@kitconcept.com
